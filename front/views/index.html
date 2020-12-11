@@ -7,7 +7,7 @@
         <title>Little Friends</title>
         <meta name="description" content="Little Friends ...">
         <meta name="viewport" content="device = device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../templates/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../templates/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -25,25 +25,41 @@
                     <!-- left menu -->
                     <nav class="navbar">
                         <div class="row">
-                            <h1><a href="../index.html" class="brand navbar-brand">Little Friends</a></h1>
-                            <img class="img-fluid" src="../../templates/img/logo-dog.png">
+                            <!-- without h1 if user isn`t logged in -->
+                            <!-- with h1 if user is logged -->
+                            <h1><a href="#" class="brand navbar-brand">Little Friends</a></h1>
+                            <img class="img-fluid" src="../templates/img/logo-dog.png">
                         </div>
                         <br>
                         <hr>
                         <div class="row">
                             <ul class="nav navbar-nav bd-navbar-nav flex-column">
+
+                                <!--user isn`t logged in
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./login.html">Вхід</a>
+                                </li>-->
+
+                                <!--user is logged-->
                                 <li class="nav-item">
                                     <a class="nav-link active" href="./my_profile.html">Мій профіль</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./message.html">Повідомлення</a>
+                                    <a class="nav-link active" href="./announcement/my_announcements.html">Мій оголошення</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">Про нас</a>
+                                    <a class="nav-link" href="./message.html">Повідомлення</a>
+                                </li>
+
+                                <!--for both-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./home/about.html">Про нас</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./contact.html">Зворотній зв'язок</a>
                                 </li>
+
+                                <!--user is logged-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
                                 </li>
@@ -53,60 +69,70 @@
                 </div>
                 <div class="col-10">
 
-                    <!-- user photo -->
-                    <img class="avatar" src="../../templates/img/rub.jpg" alt="Avatar">
-
+                    <!--user isn`t logged in
                     <div class="row">
-                        <div class="announcement col-11 text-center">
-                            <h2>Мої оголошення</h2>
+                        <div class="col-12">
+                            <h1 class="brand-not">Little Friends</h1>
                             <hr>
-                            <div class="row">
-                                <div class="col-4">
-                                    <strong>Назва</strong>
-                                </div>
-                                <div class="col-4">
-                                    <strong>Період</strong>
-                                </div>
-                                <div class="col-2">
-                                    <strong>Час</strong>
-                                </div>
-                            </div>
-                            <hr>
+                        </div>
+                    </div>-->
 
-                            <div class="row">
-                                <div class="col-4">
-                                    <p>Title</p>
-                                </div>
-                                <div class="col-4">
-                                    <p>23.12.2020 - 24.12.2020</p>
-                                </div>
-                                <div class="col-2">
-                                    <p>00:00</p>
-                                </div>
-                                <div class="col-2">
-                                    <a href="./details.html"><i class="fas fa-info"></i></a>
-                                </div>
+                    <!--user is logged in-->
+                    <!-- user photo -->
+
+                    <img class="avatar" src="../templates/img/rub.jpg" alt="Avatar">
+
+                    <!-- top menu -->
+                    <div class="top-menu">
+                        <div class="row">
+                            <div class="col-4">
+                                <input type="submit" value="Всі оголошення" class="top-menu-item"/>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-4">
-                                    <p>Title</p>
-                                </div>
-                                <div class="col-4">
-                                    <p>23.12.2020 - 24.12.2020</p>
-                                </div>
-                                <div class="col-2">
-                                    <p>00:00</p>
-                                </div>
-                                <div class="col-2">
-                                    <a href="./details.html"><i class="fas fa-info"></i></a>
-                                </div>
+
+                            <!-- filter looking for all or using hashtag -->
+                            <div class="col-4">
+                                <select class="top-menu-item">hello
+                                    <option>Шукаю</option>
+                                    <option>muy</option>
+                                </select>
                             </div>
-                            
+
+                            <!-- filter offer all or using hashtag -->
+
+                            <div class="col-4">
+                                <select class="top-menu-item">
+                                    <option>Пропоную</option>
+                                    <option>muy</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <hr>
+
+                    <div class="row">
+                        <div class="announcement col-md-3">
+
+                            <!-- announcement -->
+                            <div class="row">
+                                <div class="col-4">
+                                     <img src="../templates/img/rub.jpg" class="user-img"/>
+                                </div>
+                                <div class="col-8">
+                                    <h2>User</h2>
+                                    <p>00:17</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <img src="../templates/img/800846.jpg" class="img-fluid">
+                                <p>sdfghjkl;'sdfghjkl;'sdfghjkl;sdfghjk</p>
+                                
+                                <!--user is logged-->
+                                <a href="./announcement/details.html" class="announcement-link">Докладніше</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+                <hr>
             </div>
         </div>
     </body>
