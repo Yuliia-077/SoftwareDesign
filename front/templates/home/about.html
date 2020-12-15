@@ -7,7 +7,7 @@
         <title>Little Friends</title>
         <meta name="description" content="Little Friends ...">
         <meta name="viewport" content="device = device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../templates/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -22,34 +22,34 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2">
-                    
+
                     <!-- left menu -->
                     <nav class="navbar">
                         <div class="row">
                             <h1><a href="../index.html" class="brand navbar-brand">Little Friends</a></h1>
-                            <img class="img-fluid" src="../../templates/img/logo-dog.png">
+                            <img class="img-fluid" src="../../static/img/logo-dog.png">
                         </div>
                         <br>
                         <hr>
                         <div class="row">
                             <ul class="nav navbar-nav bd-navbar-nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./announcement/my_announcements.html">Мій оголошення</a>
+                                    <a class="nav-link active" href="../announcement/my_announcements.html">Мої оголошення</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="./my_profile.html">Мій профіль</a>
+                                    <a class="nav-link active" href="#">Мій профіль</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./message.html">Повідомлення</a>
+                                    <a class="nav-link" href="#">Повідомлення</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">Про нас</a>
+                                    <a class="nav-link" href="#">Про нас</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./contact.html">Зворотній зв'язок</a>
+                                    <a class="nav-link" href="#">Зворотній зв'язок</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./login.html" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
+                                    <a class="nav-link" href="#" onclick="return confirm('Чи дійсно ви хочете вийти?')">Вихід</a>
                                 </li>
                             </ul>
                         </div>
@@ -58,42 +58,17 @@
                 <div class="col-10">
 
                     <!-- user photo -->
-                    <img class="avatar" src="../../templates/img/rub.jpg" alt="Avatar">
+                    <img class="avatar" src="../../static/img/rub.jpg" alt="Avatar">
 
+                    <!--information about project-->
                     <div class="row">
-                        <div class="announcement col-11 text-center">
-                            <h2>Мої оголошення</h2>
+                        <div class="announcement col-11">
+                            <h2 class="text-center">Про Little Friends</h2>
                             <hr>
-                            <div class="row">
-                                <div class="col-4">
-                                    <strong>Назва</strong>
-                                </div>
-                                <div class="col-4">
-                                    <strong>Період</strong>
-                                </div>
-                                <div class="col-2">
-                                    <strong>Час</strong>
-                                </div>
-                            </div>
-
-                            <!--inf about my announcement-->
-                            <hr>
-                            <div class="row">
-                                <div class="col-4">
-                                    <p>Title</p>
-                                </div>
-                                <div class="col-4">
-                                    <p>23.12.2020 - 24.12.2020</p>
-                                </div>
-                                <div class="col-2">
-                                    <p>00:00</p>
-                                </div>
-                                <div class="col-2">
-                                    <a href="./details.html"><i class="fas fa-info"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
+                            <article>
+                                «LittleFriends» - це програма, яка допоможе власникам тварин знайти людей, які допоможуть доглядати за їхніми домашніми улюбленцями. 
+                            </article>
+                        </div>   
                     </div>
                     <hr>
                 </div>
